@@ -35,11 +35,19 @@
           // Login Form
           /* Show login form if user is not logged in */
           html = `
-            <h1>Please sign up or login</h1>
-            <form onsubmit="handleLogin(event)">
-              <input type="email" name="email" required="required" placeholder="Enter your email" />
-              <button type="submit">Send</button>
-            </form>
+            <div class="container" onclick="onclick">
+            <div class="top"></div>
+            <div class="bottom"></div>
+            <div class="center">
+                <h2>Please Sign In</h2>
+                <form onsubmit="handleLogin(event)">
+                    <input type="email" name="email" required="required" placeholder="email"/>
+                    <input type="password" name="password" required="required" placeholder="password"/>
+                    <button type="submit">Send</button>
+                    <h2>&nbsp;</h2>
+                </form>
+            </div>
+            </div>
           `;
 
           if (isLoggedIn) {
