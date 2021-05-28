@@ -1,0 +1,154 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .car {
+            width: 50px;
+            height: 70px;
+            background-color: red;
+            position: relative;
+            left: 350px;
+            top: 120px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="carGame">
+
+        <div class="score">
+
+            <div class="startScreen">
+
+                <p> Press here to start <br>
+                    Arrow keys to move <br>
+                    If you hit another car, you will lose! </p>
+
+            </div>
+
+            <div class="gameArea hide">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const score = document.querySelector('.score');
+        const startScreen = document.querySelector('.startScreen');
+        const gameArea = document.querySelector('.gameArea');
+
+
+        startScreen.addEventListener('click', start);
+
+        let player = {};
+
+
+        let keys = {
+            ArrowUp: false, ArrowDown: false,
+            ArrowLeft: false, ArrowRight: false
+        }
+
+
+        document.addEventListener('keydown', keyDown);
+        document.addEventListener('keyup', keyUp);
+
+
+        function keyDown(e) {
+            e.preventDefault();
+            keys[e.key] = true;
+        }
+
+        function keyUP(e) {
+            e.preventDefault();
+            keys[e.key] = false;
+        }
+
+        function gamePlay() {
+
+            if (player.start) {
+
+               if (keys.ArrowUp) {
+                    player.y = player.y-5;
+                    
+                }
+                if (keys.ArrowDown) {
+                    player.y = player.y+ 5
+                }
+                if (keys.ArrowLeft) {
+                    player.x = player.x-5
+                }
+                if (keys.ArrowRight) {
+                    player.x = player.x-5
+                }
+
+                window.requestAnimationFrame(gamePlay);
+            }
+        }
+
+
+        function start() {
+
+            gameArea.classList.remove('hide');
+            startScreen.classList.add('hide');
+
+            player.start = true;
+            window.requestAnimationFrame(gamePlay);
+
+            let car = document.createElement('div');
+            car.setAttribute('class', 'car');
+           
+            gameArea.appendChild(car);
+
+            player.x = car.offsetLeft;
+            player.y = car.offsetTop;
+
+          
+
+            console.log(player.y);
+            console.log(player.x);
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game">
+    <div id="character"></div>
+</div>
+    
+</body>
+<script src="script.js"></script>
+</html>
+
+
+
