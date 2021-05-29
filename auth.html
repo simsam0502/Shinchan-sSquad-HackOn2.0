@@ -51,6 +51,7 @@
           if (isLoggedIn) {
             /* Get user metadata including email */
             const userMetadata = await magic.user.getMetadata();
+            console.log(userMetadata);
             // Idhar dashboard aayega
             html = `
               <h1>Current user: ${userMetadata.email}</h1>
