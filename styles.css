@@ -8,6 +8,7 @@ body {
   padding:0;
   min-height: 100vh;
   font-family: "Raleway", sans-serif;
+  background-color: #e46569;
 }
 
 .container {
@@ -87,12 +88,33 @@ body {
   font-family: inherit;
 }
 button{
-    width: 100%;
     padding: 15px;
     margin: 5px;
     border-radius: 1px;
     border: 1px solid #ccc;
     font-family: inherit;
+}
+.button1 {
+  /* width: 25%; */
+  transition-duration: 0.4s;
+}
+#lol{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+#bluebtn{
+  margin-top: 70px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.button1:hover {
+  background-color: #4CAF50; 
+  color: white;
 }
 #smile{
   position: absolute;
